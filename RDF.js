@@ -143,7 +143,7 @@ function handleCreators(newItem, creators, creatorType) {
 			if (c.firstName || c.lastName) return c;
 
 			c = getFirstResults(obj, [n.so+"name"], true);
-			if (c) return ZU.cleanAuthor(c, creatorType);
+			if (c) return ZU.cleanAuthor(c, creatorType, c.includes(','));
 		}
 	}
 
